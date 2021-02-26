@@ -4,6 +4,7 @@ import math
 import numpy as np
 import os
 
+DATA_DIR = "data/"
 FILES = ["a.txt", "b.txt", "c.txt", "d.txt", "e.txt", "f.txt"]
 SCHEDULE_FILES = ["a_schedule.txt", "b_schedule.txt", "c_schedule.txt", "d_schedule.txt", "e_schedule.txt", "f_schedule.txt"]
 METHOD_DIR = "max-1/"
@@ -28,7 +29,7 @@ for file_name, schedule_file_name in zip(FILES, SCHEDULE_FILES):
 	streets_dict = {}
 	intersections_dict = {}
 
-	with open(file_name, "r") as file:
+	with open(DATA_DIR + file_name, "r") as file:
 		raw_params = file.readline()
 		params = [int(i) for i in raw_params.split(" ")]
 
